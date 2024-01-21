@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* NAVBAR */
+
+.back-btn {
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  color: #444;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 8px;
+  right: 0;
+}
+
+.dropdown-content li {
+  position: relative;
+  padding: 8px 16px;
+  text-align: left;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s; /* Add a smooth transition for the background color */
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+/* Show the overlay when the dropdown is open */
+
+.dropdown-content li:last-child {
+  border-bottom: none;
+  color: red;
+}
+
+.dropdown-content li:hover {
+  background-color: #f1f1f1;
+}
+.menu-btn:hover .dropdown-content {
+  display: block;
+}
+
+/* MAIN CARD */
+
+.menu-options{
+  display: none;
+}
+
+.main-card {
+  margin: 20px;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 20px 20px 10px;
+}
+
+.one header,
+.one header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.one header div {
+  color: #444;
+}
+
+.one header span {
+  font-size: 0.8rem;
+  color: rgb(168, 168, 226);
+}
+
+.one h1 {
+  font-weight: 500;
+  color: rgb(68, 68, 124);
+  margin: 1rem 0;
+}
+
+.one footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.one footer h4 {
+  color: rgb(158, 158, 196);
+}
+
+.one footer span {
+  background-color: rgb(226, 11, 83);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 2rem;
+}
+
+.one .bottom-btn {
+  margin-top: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.one.menu-options {
+  padding: 0 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.one.menu-options button {
+  color: #a5a2a2;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.one.menu-options .active {
+  background-color: #c4bfbf;
+  color: white;
+}
+
+.one.menu-options button:hover {
+  background-color: #c4bfbf;
+  color: white;
+}
+
+
+/* GRAPH CARDS */
+.graph-card {
+  margin: 0 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+.graph-card .dots {
+  position: relative;
+}
+
+.two header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.two header div,
+.two footer {
+  display: flex;
+  align-items: center;
+}
+
+.two footer {
+  position: absolute;
+  bottom: 1rem;
+}
+
+.two footer p {
+  font-size: 0.9rem;
+}
+
+.two header div span {
+  font-size: 0.8rem;
+}
+
+.charts Area {
+  display: flex;
+}
+
+/* MINI CARDS */
+
+.mini-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  gap: 2rem;
+  margin-bottom: 70px;
+}
+
+.mini-card {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 20px;
+  text-align: center;
+}
+
+.mini-card p {
+  color: rgb(53, 53, 61);
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: #ffffff;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  color: grey;
+}
+
+.icon:hover {
+  color: black;
+  transform: scale(1.1);
+}
+
+.icon:hover,
+.selected {
+  color: black;
+  transform: scale(1.2);
+}
